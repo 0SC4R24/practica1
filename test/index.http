@@ -1,0 +1,17 @@
+POST http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000/api HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/oscar HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/oscar?age=18 HTTP/1.1
