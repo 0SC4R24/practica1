@@ -10,8 +10,8 @@ npm install
 
 # Crear archivo .env
 # El archivo .env debe contener:
-##   PORT=3000
-##   DB_URI=mongodb+srv://<TuUserName>:<TuPassword>@<TuCluster>.bc4czvg.mongodb.net/<TuBBDD>
+#   PORT=3000
+#   DB_URI=mongodb+srv://<TuUserName>:<TuPassword>@<TuCluster>.bc4czvg.mongodb.net/<TuBBDD>
 touch .env
 
 # Ejecutar la aplicación
