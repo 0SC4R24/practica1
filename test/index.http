@@ -1,17 +1,98 @@
-POST http://localhost:3000/ HTTP/1.1
+GET http://localhost:3000/api/comercios HTTP/1.1
 
 ###
 
-GET http://localhost:3000/ HTTP/1.1
+GET http://localhost:3000/api/comercios?orderBy=cif HTTP/1.1
 
 ###
 
-GET http://localhost:3000/api HTTP/1.1
+POST http://localhost:3000/api/comercios HTTP/1.1
+Content-Type: application/json
+api_key: Api-publica-123
+
+{
+    "nombre": "Mercadona",
+    "cif": "12345678X",
+    "direccion": "Calle Falsa 123",
+    "email": "info@mercadona.es",
+    "telefono": "123456789",
+    "id_pagina": 1
+}
 
 ###
 
-GET http://localhost:3000/api/oscar HTTP/1.1
+POST http://localhost:3000/api/comercios HTTP/1.1
+Content-Type: application/json
+api_key: Api-publica-123
+
+{
+    "nombre": "Decathlon",
+    "cif": "87654321Z",
+    "direccion": "Calle de Nico 13",
+    "email": "info@decathlon.es",
+    "telefono": "234567891",
+    "id_pagina": 2
+}
 
 ###
 
-GET http://localhost:3000/api/oscar?age=18 HTTP/1.1
+GET http://localhost:3000/api/comercios/12345678X HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/comercios HTTP/1.1
+Content-Type: application/json
+api_key: Api-publica-123
+
+{
+    "nombre": "MediaMarkt",
+    "cif": "57684312C",
+    "direccion": "Calle de Iker 5",
+    "email": "info@mediamarkt.es",
+    "telefono": "584126735",
+    "id_pagina": 3
+}
+
+###
+
+PUT http://localhost:3000/api/comercios/57684312C HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "MediaMarkt",
+    "direccion": "Calle de Dario 5",
+    "email": "info@mediamarkt.es",
+    "telefono": "584126735",
+    "id_pagina": 3
+}
+
+###
+
+GET http://localhost:3000/api/comercios/57684312C HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/comercios HTTP/1.1
+Content-Type: application/json
+api_key: Api-publica-123
+
+{
+    "nombre": "a",
+    "cif": "12C",
+    "direccion": "Calle Inexistente 8",
+    "email": "info@a.es",
+    "telefono": "12",
+    "id_pagina": 4
+}
+
+###
+
+GET http://localhost:3000/api/comercios/12C HTTP/1.1
+
+###
+
+DELETE http://localhost:3000/api/comercios/12C HTTP/1.1
+
+###
+
+DELETE http://localhost:3000/api/comercios/12C?deleteBy=physical HTTP/1.1
