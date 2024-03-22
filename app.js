@@ -4,6 +4,10 @@ require("dotenv").config();
 
 const app = express();
 
+const dbConnect = require("./config/mongo");
+
+dbConnect();
+
 app.use(cors());
 app.use(express.json());
 
